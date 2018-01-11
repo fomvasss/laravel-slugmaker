@@ -6,7 +6,6 @@
         "laravel-slugmaker",
         "slug"
     ],
-    "version": "1.6.0",
     "homepage": "https://github.com/fomvasss/laravel-slugmaker",
     "license": "MIT",
     "authors": [
