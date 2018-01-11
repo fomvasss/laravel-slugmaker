@@ -1,0 +1,39 @@
+{
+    "name": "fomvasss/laravel-slugmaker",
+    "description": "Generate slugs when saving Eloquent models in a separate table",
+    "keywords": [
+        "fomvasss",
+        "laravel-slugmaker",
+        "slug"
+    ],
+    "version": "1.6.0",
+    "homepage": "https://github.com/fomvasss/laravel-slugmaker",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Vasyl Fomin",
+            "email": "fomvasss@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php" : ">=7.0.0",
+        "illuminate/support": "5.2.*|5.3.*|5.4.*|5.5.*"
+
+    },
+    "autoload": {
+        "files": [
+            "src/helpers.php"
+        ],
+        "psr-4": {
+            "Fomvasss\\SlugMaker\\": "src"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Fomvasss\\SlugMaker\\SlugMakerServiceProvider"
+            ]
+        }
+    }
+}

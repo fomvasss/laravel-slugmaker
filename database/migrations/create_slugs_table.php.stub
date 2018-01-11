@@ -1,0 +1,34 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+
+class CreateSlugsTable extends Migration
+{
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
+    public function up()
+    {
+        Schema::create('slugs', function (Blueprint $table) {
+            $table->bigIncrements('id');
+            $table->string('name')->index();
+            $table->morphs('slugable');
+
+            $table->unique(['slugable_id', 'slugable_type']);
+        });
+    }
+    }
+
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+        Schema::drop('slugs');
+    }
+}
