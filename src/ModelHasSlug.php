@@ -7,6 +7,16 @@ trait ModelHasSlug
     public $slugSourceFields;
 
     /**
+     * @return array
+     */
+    public function getSlugSourceFields(): array
+    {
+        $sourceFields = config('slugmaker.default_source_fields', []);
+
+        return is_array($sourceFields) ? $sourceFields : [$sourceFields];
+    }
+
+    /**
      * @return mixed
      */
     public function slug()
@@ -96,12 +106,5 @@ trait ModelHasSlug
     public function scopeGetArrayIdsBySlugs($query, array $slugs): array
     {
         return $this->scopeBySlugs($query, $slugs)->pluck('id')->toArray();
-    }
-
-    public function getSlugSourceFields(): array
-    {
-        $sourceFields = config('slugmaker.default_source_fields', []);
-
-        return is_array($sourceFields) ? $sourceFields : [$sourceFields];
     }
 }

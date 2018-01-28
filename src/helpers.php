@@ -36,7 +36,7 @@ if (! function_exists('slug_get_grouped_class')) {
 }
 
 if (! function_exists('slug_make')) {
-    function slug_make($model, $slug)
+    function slug_make($model, $slug = '')
     {
         return app(\Fomvasss\SlugMaker\SlugHelper::class)->makeForModel($model, $slug);
     }

@@ -24,7 +24,7 @@ class SlugMakerServiceProvider extends ServiceProvider
 
     public function register()
     {
-        $this->mergeConfigFrom(__DIR__.'/../config/slugmaker.php', 'slugmaker-config');
+        $this->mergeConfigFrom(__DIR__.'/../config/slugmaker.php', 'slugmaker');
 
         $this->app->bind(SlugHelper::class, function () {
             return new SlugHelper(new Slug());
