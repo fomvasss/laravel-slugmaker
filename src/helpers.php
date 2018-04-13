@@ -35,6 +35,13 @@ if (! function_exists('slug_get_grouped_class')) {
     }
 }
 
+if (! function_exists('slug_get')) {
+    function slug_get($model)
+    {
+        return app(\Fomvasss\SlugMaker\SlugHelper::class)->getSlugName($model);
+    }
+}
+
 if (! function_exists('slug_make')) {
     function slug_make($model, $slug = '')
     {

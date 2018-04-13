@@ -113,7 +113,7 @@ $slug = Article::getArrayIdsBySlugs(['my-slug-1', 'my-slug-2']);
 
 #### Usage function helpers:
 
-- `slug_get_model($slug, $class = null)`
+- `slug_get($slug)`
 - `slug_get_models($slugs, $class = null)`
 - `slug_get_id($slug, $class = null)`
 - `slug_get_ids($slugs, $class = null)`

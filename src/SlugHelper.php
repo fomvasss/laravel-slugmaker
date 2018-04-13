@@ -107,6 +107,15 @@ class SlugHelper
 
     /**
      * @param $model
+     * @return mixed
+     */
+    public function getSlugName($model)
+    {
+        return $model->getSlugName();
+    }
+
+    /**
+     * @param $model
      * @param $slug
      * @return mixed
      */
