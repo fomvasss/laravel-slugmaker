@@ -27,12 +27,12 @@ Fomvasss\SlugMaker\SlugMakerServiceProvider::class,
 ---
 Publish config file:
 ```bash
-php artisan vendor:publish --provider="Fomvasss\SlugMaker\SlugMakerServiceProvider" --tag=slugmaker-config
+php artisan vendor:publish --tag=slugmaker-config
 ```
 
 Publish the migration file:
 ```bash
-php artisan vendor:publish --provider="Fomvasss\SlugMaker\SlugMakerServiceProvider" --tag=slugmaker-migrations
+php artisan vendor:publish --tag=slugmaker-migrations
 ```
 and run the migration:
 ```bash

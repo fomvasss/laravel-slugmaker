@@ -20,7 +20,6 @@ class CreateSlugsTable extends Migration
             $table->unique(['slugable_id', 'slugable_type']);
         });
     }
-    }
 
     /**
      * Reverse the migrations.
